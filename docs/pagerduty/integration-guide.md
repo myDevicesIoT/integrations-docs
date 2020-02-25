@@ -1,7 +1,7 @@
 # PagerDuty + myDevices Integration Benefits
 
 * Notify on-call responders based on alerts sent from myDevices.
-* Create high and low urgency incidents based on the severity of the event from the myDevices event payload.***
+* Create high and low urgency incidents based on the severity of the event from the myDevices event payload.
 
 # How it Works
 * myDevices metrics that fall outside of a designated range will send an event to a service in PagerDuty. Events from myDevices will trigger a new incident on the corresponding PagerDuty service, or group as alerts into an existing incident.
