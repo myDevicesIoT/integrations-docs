@@ -35,9 +35,8 @@ If you need help with this integration, please contact support@iotinabox.com
    * Severity: Enter the severity for incidents created by alert events.
       * Severity options: error, warning, or info.
 
-   ![](https://iotinabox.zendesk.com/hc/article_attachments/360022622633/PagerDuty2.PNG)
+   ![](https://iotinabox.zendesk.com/hc/article_attachments/360060048714/PagerDuty2b.png)
 3. After saving the Integration, you will see it shown in your list of integrations.
-![](https://iotinabox.zendesk.com/hc/article_attachments/360060048714/PagerDuty2b.png)
    * You can then edit the integration to make any changes needed.
    * You can also toggle the Integration on/off at any time from here as well. 
    * Disabling the integration will stop new data from being sent to PagerDuty.
