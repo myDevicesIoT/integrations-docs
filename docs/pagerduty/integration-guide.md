@@ -18,7 +18,7 @@ If you need help with this integration, please contact support@iotinabox.com
 
 ### Integrating With a PagerDuty Service
 1. From the **Configuration** menu, select **Services**.
-![](https://iotinabox.zendesk.com/hc/article_attachments/360021676034/PagerDuty1.PNG)
+![](https://res.cloudinary.com/dctlrnwuz/image/upload/v1583797753/iotinabox/pagerduty-i9n-guide.png)
 2. There are two ways to add an integration to a service:
    * **If you are adding your integration to an existing service**: Click the **name** of the service you want to add the integration to. Then, select the **Integrations** tab and click the **New Integration** button.
    * **If you are creating a new service for your integration**: Please read our documentation in section [Configuring Services and Integrations](https://support.pagerduty.com/docs/services-and-integrations#section-configuring-services-and-integrations) and follow the steps outlined in the [Create a New Service](https://support.pagerduty.com/docs/services-and-integrations#section-create-a-new-service) section, selecting myDevices as the **Integration Type** in step 4. Continue with the In  myDevices  section (below) once you have finished these steps.
