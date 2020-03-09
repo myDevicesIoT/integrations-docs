@@ -25,7 +25,7 @@ If you need help with this integration, please contact support@iotinabox.com
 3. Enter an **Integration Name** in the format `iot-datacenter-monitoring` (e.g.  myDevices-IoT-Datacenter) and select  myDevices  from the Integration Type menu.
 4. Click the **Add Integration** button to save your new integration. You will be redirected to the Integrations tab for your service.
 5. An **Integration Key** will be generated on this screen. Keep this key saved in a safe place, as it will be used when you configure the integration with  myDevices  in the next section.
-![](https://pdpartner.s3.amazonaws.com/ig-template-copy-integration-key.png)
+![](https://res.cloudinary.com/dctlrnwuz/image/upload/v1583797074/iotinabox/pagerduty-service-i9n-image.png)
 
 ## In myDevices
 
@@ -37,7 +37,7 @@ If you need help with this integration, please contact support@iotinabox.com
 
    ![](https://iotinabox.zendesk.com/hc/article_attachments/360022622633/PagerDuty2.PNG)
 3. After saving the Integration, you will see it shown in your list of integrations.
-![](https://iotinabox.zendesk.com/hc/article_attachments/360022624273/PagerDuty4.png)
+![](https://iotinabox.zendesk.com/hc/article_attachments/360060048714/PagerDuty2b.png)
    * You can then edit the integration to make any changes needed.
    * You can also toggle the Integration on/off at any time from here as well. 
    * Disabling the integration will stop new data from being sent to PagerDuty.
