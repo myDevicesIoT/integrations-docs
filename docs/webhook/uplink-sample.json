@@ -1,0 +1,131 @@
+{
+  "event_type":"uplink",
+  "event_data":{
+     "device_id":"1eaedbc0-75f7-11eb-8585-01d3d033571a",
+     "user_id":"3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+     "payload":[
+        {
+           "name":"Battery",
+           "sensor_id":"1f201422-75f7-11eb-8585-01d3d033571a",
+           "type":"batt",
+           "unit":"p",
+           "value":100,
+           "channel":5,
+           "timestamp":1614196169569
+        },
+        {
+           "name":"Temperature",
+           "sensor_id":"1f1e1850-75f7-11eb-8585-01d3d033571a",
+           "type":"temp",
+           "unit":"c",
+           "value":22.11,
+           "channel":3,
+           "timestamp":1614196169569
+        },
+        {
+           "name":"Humidity",
+           "sensor_id":"1f201420-75f7-11eb-8585-01d3d033571a",
+           "type":"rel_hum",
+           "unit":"p",
+           "value":32.38,
+           "channel":4,
+           "timestamp":1614196169569
+        },
+        {
+           "name":"RSSI",
+           "sensor_id":"1f201421-75f7-11eb-8585-01d3d033571a",
+           "type":"rssi",
+           "unit":"dbm",
+           "value":-51,
+           "channel":100,
+           "timestamp":1614196169569
+        },
+        {
+           "name":"SNR",
+           "sensor_id":"",
+           "type":"snr",
+           "unit":"db",
+           "value":11.3,
+           "channel":101,
+           "timestamp":1614196169569
+        }
+     ],
+     "gateways":[
+        {
+           "gweui":"000080029c493955",
+           "time":0,
+           "rssi":-51,
+           "snr":11.3
+        }
+     ],
+     "fcnt":12,
+     "fport":6,
+     "raw_payload":"AQEBHgijDKYAAAA=",
+     "raw_format":"base64",
+     "client_id":"ebe4c760-d761-11ea-b2ab-f35fff94ad45",
+     "hardware_id":"00137a1000000abc",
+     "timestamp":1614196169569,
+     "application_id":"simplysense",
+     "device_type_id":"26702500-32a0-11e8-867e-ddad6d07d21e"
+  },
+  "company":{
+     "id":6109,
+     "address":"3333 Arapahoe Rd",
+     "city":"Erie",
+     "country":"United States",
+     "created_at":"2020-08-05T21:23:48Z",
+     "industry":"[\"Food & Beverage\"]",
+     "latitude":40.016926,
+     "longitude":-105.10077,
+     "name":"Safeway - ss pp",
+     "state":"CO",
+     "status":0,
+     "timezone":"America/Denver",
+     "updated_at":"2020-08-05T21:23:48Z",
+     "user_id":"3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+     "zip":"80516"
+  },
+  "location":{
+     "id":5454,
+     "address":"3333 Arapahoe Rd",
+     "city":"Erie",
+     "country":"United States",
+     "created_at":"2020-08-05T21:23:49Z",
+     "industry":"[\"Food & Beverage\"]",
+     "latitude":40.016926,
+     "longitude":-105.10077,
+     "name":"Safeway - ss pp",
+     "state":"CO",
+     "status":0,
+     "timezone":"America/Denver",
+     "updated_at":"2020-08-05T21:23:49Z",
+     "user_id":"3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+     "zip":"80516",
+     "company_id":6109
+  },
+  "device_type":{
+     "id":"26702500-32a0-11e8-867e-ddad6d07d21e",
+     "application_id":"iotinabox",
+     "category":"module",
+     "codec":"lorawan.netvox.temp",
+     "data_type":"",
+     "description":"Netvox Temperature and Humidity Sensor",
+     "manufacturer":"Netvox",
+     "model":"R711",
+     "name":"Netvox Temperature - IoT in a Box",
+     "parent_constraint":"NOT_ALLOWED",
+     "proxy_handler":"PrometheusClient",
+     "subcategory":"lora",
+     "transport_protocol":"lorawan",
+     "version":"",
+     "created_at":"2018-03-28T15:53:25Z",
+     "updated_at":"2019-09-25T16:20:40Z"
+  },
+  "device":{
+     "id":70078980,
+     "thing_name":"Wireless az - ss pp",
+     "created_at":"2021-02-23T16:49:40Z",
+     "updated_at":"2021-02-23T16:49:41Z",
+     "status":0
+  }
+}

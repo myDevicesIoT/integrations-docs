@@ -1,0 +1,102 @@
+{
+  "event_type": "alert",
+  "event_data": {
+      "userId": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+      "applicationId": "simplysense",
+      "clientId": "ebe4c760-d761-11ea-b2ab-f35fff94ad45",
+      "thingId": "e3d81db0-75f9-11eb-8585-01d3d033571a",
+      "sensorId": "e42be300-75f9-11eb-8585-01d3d033571a",
+      "ruleId": "913ca554-cce7-441e-98b8-601d6b3fd348",
+      "eventType": "alert-state-changed",
+      "totalTriggered": 1,
+      "hardwareId": "00137a1000000ghi",
+      "triggered": true,
+      "value": "0",
+      "timestamp": "1614201509775",
+      "triggerData": {
+          "delay": {
+              "count": 1,
+              "time": 600000
+          },
+          "location": {
+              "lat": null,
+              "lon": null,
+              "ts": "1614201509775"
+          },
+          "trigger_reading": 0,
+          "trigger_type": "trigger",
+          "trigger_unit": "d",
+          "triggers": [{
+              "conditions": [{
+                  "operator": "eq",
+                  "value": 0
+              }],
+              "trigger_reading": 0,
+              "trigger_unit": "d",
+              "triggers_combination": "OR"
+          }],
+          "triggers_combination": "OR"
+      },
+      "title": "Leak ttn - pp ss No Leak Detected Alert"
+  },
+  "company": {
+      "id": 6109,
+      "address": "3333 Arapahoe Rd",
+      "city": "Erie",
+      "country": "United States",
+      "created_at": "2020-08-05T21:23:48Z",
+      "industry": "[\"Food & Beverage\"]",
+      "latitude": 40.016926,
+      "longitude": -105.10077,
+      "name": "Safeway - ss pp",
+      "state": "CO",
+      "status": 0,
+      "timezone": "America/Denver",
+      "updated_at": "2020-08-05T21:23:48Z",
+      "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+      "zip": "80516"
+  },
+  "location": {
+      "id": 5454,
+      "address": "3333 Arapahoe Rd",
+      "city": "Erie",
+      "country": "United States",
+      "created_at": "2020-08-05T21:23:49Z",
+      "industry": "[\"Food & Beverage\"]",
+      "latitude": 40.016926,
+      "longitude": -105.10077,
+      "name": "Safeway - ss pp",
+      "state": "CO",
+      "status": 0,
+      "timezone": "America/Denver",
+      "updated_at": "2020-08-05T21:23:49Z",
+      "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+      "zip": "80516",
+      "company_id": 6109
+  },
+  "device_type": {
+      "id": "299fbd30-2733-11e8-bd80-0961dfa396b4",
+      "application_id": "iotinabox",
+      "category": "module",
+      "codec": "lorawan.netvox.leak",
+      "data_type": "",
+      "description": "NETVOX LORAWAN WATER LEAK SENSOR R311W US915/AS923/EU868",
+      "manufacturer": "NETVOX",
+      "model": "R311W",
+      "name": "Netvox Leak - IoT in a Box",
+      "parent_constraint": "NOT_ALLOWED",
+      "proxy_handler": "PrometheusClient",
+      "subcategory": "lora",
+      "transport_protocol": "lorawan",
+      "version": "",
+      "created_at": "2018-03-14T02:55:32Z",
+      "updated_at": "2019-09-25T16:20:40Z"
+  },
+  "device": {
+      "id": 70078985,
+      "thing_name": "Leak ttn - pp ss",
+      "created_at": "2021-02-23T17:09:30Z",
+      "updated_at": "2021-02-23T17:09:30Z",
+      "status": 0
+  }
+}

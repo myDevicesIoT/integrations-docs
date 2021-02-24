@@ -1,0 +1,1277 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/uplink-schema.json",
+  "type": "object",
+  "title": "Sensor Uplink JSON Schema",
+  "description": "Sensor Uplink JSON Schema",
+  "default": {},
+  "examples": [
+      {
+          "event_type": "uplink",
+          "event_data": {
+              "device_id": "1eaedbc0-75f7-11eb-8585-01d3d033571a",
+              "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+              "payload": [
+                  {
+                      "name": "Battery",
+                      "sensor_id": "1f201422-75f7-11eb-8585-01d3d033571a",
+                      "type": "batt",
+                      "unit": "p",
+                      "value": 100,
+                      "channel": 5,
+                      "timestamp": 1614196169569
+                  },
+                  {
+                      "name": "Temperature",
+                      "sensor_id": "1f1e1850-75f7-11eb-8585-01d3d033571a",
+                      "type": "temp",
+                      "unit": "c",
+                      "value": 22.11,
+                      "channel": 3,
+                      "timestamp": 1614196169569
+                  },
+                  {
+                      "name": "Humidity",
+                      "sensor_id": "1f201420-75f7-11eb-8585-01d3d033571a",
+                      "type": "rel_hum",
+                      "unit": "p",
+                      "value": 32.38,
+                      "channel": 4,
+                      "timestamp": 1614196169569
+                  },
+                  {
+                      "name": "RSSI",
+                      "sensor_id": "1f201421-75f7-11eb-8585-01d3d033571a",
+                      "type": "rssi",
+                      "unit": "dbm",
+                      "value": -51,
+                      "channel": 100,
+                      "timestamp": 1614196169569
+                  },
+                  {
+                      "name": "SNR",
+                      "sensor_id": "",
+                      "type": "snr",
+                      "unit": "db",
+                      "value": 11.3,
+                      "channel": 101,
+                      "timestamp": 1614196169569
+                  }
+              ],
+              "gateways": [
+                  {
+                      "gweui": "000080029c493955",
+                      "time": 0,
+                      "rssi": -51,
+                      "snr": 11.3
+                  }
+              ],
+              "fcnt": 12,
+              "fport": 6,
+              "raw_payload": "AQEBHgijDKYAAAA=",
+              "raw_format": "base64",
+              "client_id": "ebe4c760-d761-11ea-b2ab-f35fff94ad45",
+              "hardware_id": "00137a1000000abc",
+              "timestamp": 1614196169569,
+              "application_id": "simplysense",
+              "device_type_id": "26702500-32a0-11e8-867e-ddad6d07d21e"
+          },
+          "company": {
+              "id": 6109,
+              "address": "3333 Arapahoe Rd",
+              "city": "Erie",
+              "country": "United States",
+              "created_at": "2020-08-05T21:23:48Z",
+              "industry": "[\"Food & Beverage\"]",
+              "latitude": 40.016926,
+              "longitude": -105.10077,
+              "name": "Safeway - ss pp",
+              "state": "CO",
+              "status": 0,
+              "timezone": "America/Denver",
+              "updated_at": "2020-08-05T21:23:48Z",
+              "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+              "zip": "80516"
+          },
+          "location": {
+              "id": 5454,
+              "address": "3333 Arapahoe Rd",
+              "city": "Erie",
+              "country": "United States",
+              "created_at": "2020-08-05T21:23:49Z",
+              "industry": "[\"Food & Beverage\"]",
+              "latitude": 40.016926,
+              "longitude": -105.10077,
+              "name": "Safeway - ss pp",
+              "state": "CO",
+              "status": 0,
+              "timezone": "America/Denver",
+              "updated_at": "2020-08-05T21:23:49Z",
+              "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+              "zip": "80516",
+              "company_id": 6109
+          },
+          "device_type": {
+              "id": "26702500-32a0-11e8-867e-ddad6d07d21e",
+              "application_id": "iotinabox",
+              "category": "module",
+              "codec": "lorawan.netvox.temp",
+              "data_type": "",
+              "description": "Netvox Temperature and Humidity Sensor",
+              "manufacturer": "Netvox",
+              "model": "R711",
+              "name": "Netvox Temperature - IoT in a Box",
+              "parent_constraint": "NOT_ALLOWED",
+              "proxy_handler": "PrometheusClient",
+              "subcategory": "lora",
+              "transport_protocol": "lorawan",
+              "version": "",
+              "created_at": "2018-03-28T15:53:25Z",
+              "updated_at": "2019-09-25T16:20:40Z"
+          },
+          "device": {
+              "id": 70078980,
+              "thing_name": "Wireless az - ss pp",
+              "created_at": "2021-02-23T16:49:40Z",
+              "updated_at": "2021-02-23T16:49:41Z",
+              "status": 0
+          }
+      }
+  ],
+  "required": [
+      "event_type",
+      "event_data",
+      "company",
+      "location",
+      "device_type",
+      "device"
+  ],
+  "properties": {
+      "event_type": {
+          "$id": "#/properties/event_type",
+          "type": "string",
+          "title": "The event_type schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+              "uplink"
+          ]
+      },
+      "event_data": {
+          "$id": "#/properties/event_data",
+          "type": "object",
+          "title": "The event_data schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {
+                  "device_id": "1eaedbc0-75f7-11eb-8585-01d3d033571a",
+                  "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+                  "payload": [
+                      {
+                          "name": "Battery",
+                          "sensor_id": "1f201422-75f7-11eb-8585-01d3d033571a",
+                          "type": "batt",
+                          "unit": "p",
+                          "value": 100,
+                          "channel": 5,
+                          "timestamp": 1614196169569
+                      },
+                      {
+                          "name": "Temperature",
+                          "sensor_id": "1f1e1850-75f7-11eb-8585-01d3d033571a",
+                          "type": "temp",
+                          "unit": "c",
+                          "value": 22.11,
+                          "channel": 3,
+                          "timestamp": 1614196169569
+                      },
+                      {
+                          "name": "Humidity",
+                          "sensor_id": "1f201420-75f7-11eb-8585-01d3d033571a",
+                          "type": "rel_hum",
+                          "unit": "p",
+                          "value": 32.38,
+                          "channel": 4,
+                          "timestamp": 1614196169569
+                      },
+                      {
+                          "name": "RSSI",
+                          "sensor_id": "1f201421-75f7-11eb-8585-01d3d033571a",
+                          "type": "rssi",
+                          "unit": "dbm",
+                          "value": -51,
+                          "channel": 100,
+                          "timestamp": 1614196169569
+                      },
+                      {
+                          "name": "SNR",
+                          "sensor_id": "",
+                          "type": "snr",
+                          "unit": "db",
+                          "value": 11.3,
+                          "channel": 101,
+                          "timestamp": 1614196169569
+                      }
+                  ],
+                  "gateways": [
+                      {
+                          "gweui": "000080029c493955",
+                          "time": 0,
+                          "rssi": -51,
+                          "snr": 11.3
+                      }
+                  ],
+                  "fcnt": 12,
+                  "fport": 6,
+                  "raw_payload": "AQEBHgijDKYAAAA=",
+                  "raw_format": "base64",
+                  "client_id": "ebe4c760-d761-11ea-b2ab-f35fff94ad45",
+                  "hardware_id": "00137a1000000abc",
+                  "timestamp": 1614196169569,
+                  "application_id": "simplysense",
+                  "device_type_id": "26702500-32a0-11e8-867e-ddad6d07d21e"
+              }
+          ],
+          "required": [
+              "device_id",
+              "user_id",
+              "payload",
+              "gateways",
+              "fcnt",
+              "fport",
+              "raw_payload",
+              "raw_format",
+              "client_id",
+              "hardware_id",
+              "timestamp",
+              "application_id",
+              "device_type_id"
+          ],
+          "properties": {
+              "device_id": {
+                  "$id": "#/properties/event_data/properties/device_id",
+                  "type": "string",
+                  "title": "The device_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "1eaedbc0-75f7-11eb-8585-01d3d033571a"
+                  ]
+              },
+              "user_id": {
+                  "$id": "#/properties/event_data/properties/user_id",
+                  "type": "string",
+                  "title": "The user_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0"
+                  ]
+              },
+              "payload": {
+                  "$id": "#/properties/event_data/properties/payload",
+                  "type": "array",
+                  "title": "The payload schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": [],
+                  "examples": [
+                      [
+                          {
+                              "name": "Battery",
+                              "sensor_id": "1f201422-75f7-11eb-8585-01d3d033571a",
+                              "type": "batt",
+                              "unit": "p",
+                              "value": 100,
+                              "channel": 5,
+                              "timestamp": 1614196169569
+                          },
+                          {
+                              "name": "Temperature",
+                              "sensor_id": "1f1e1850-75f7-11eb-8585-01d3d033571a",
+                              "type": "temp",
+                              "unit": "c",
+                              "value": 22.11,
+                              "channel": 3,
+                              "timestamp": 1614196169569
+                          }
+                      ]
+                  ],
+                  "additionalItems": true,
+                  "items": {
+                      "$id": "#/properties/event_data/properties/payload/items",
+                      "anyOf": [
+                          {
+                              "$id": "#/properties/event_data/properties/payload/items/anyOf/0",
+                              "type": "object",
+                              "title": "The first anyOf schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": {},
+                              "examples": [
+                                  {
+                                      "name": "Battery",
+                                      "sensor_id": "1f201422-75f7-11eb-8585-01d3d033571a",
+                                      "type": "batt",
+                                      "unit": "p",
+                                      "value": 100,
+                                      "channel": 5,
+                                      "timestamp": 1614196169569
+                                  }
+                              ],
+                              "required": [
+                                  "name",
+                                  "sensor_id",
+                                  "type",
+                                  "unit",
+                                  "value",
+                                  "channel",
+                                  "timestamp"
+                              ],
+                              "properties": {
+                                  "name": {
+                                      "$id": "#/properties/event_data/properties/payload/items/anyOf/0/properties/name",
+                                      "type": "string",
+                                      "title": "The name schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": "",
+                                      "examples": [
+                                          "Battery"
+                                      ]
+                                  },
+                                  "sensor_id": {
+                                      "$id": "#/properties/event_data/properties/payload/items/anyOf/0/properties/sensor_id",
+                                      "type": "string",
+                                      "title": "The sensor_id schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": "",
+                                      "examples": [
+                                          "1f201422-75f7-11eb-8585-01d3d033571a"
+                                      ]
+                                  },
+                                  "type": {
+                                      "$id": "#/properties/event_data/properties/payload/items/anyOf/0/properties/type",
+                                      "type": "string",
+                                      "title": "The type schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": "",
+                                      "examples": [
+                                          "batt"
+                                      ]
+                                  },
+                                  "unit": {
+                                      "$id": "#/properties/event_data/properties/payload/items/anyOf/0/properties/unit",
+                                      "type": "string",
+                                      "title": "The unit schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": "",
+                                      "examples": [
+                                          "p"
+                                      ]
+                                  },
+                                  "value": {
+                                      "$id": "#/properties/event_data/properties/payload/items/anyOf/0/properties/value",
+                                      "type": "integer",
+                                      "title": "The value schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": 0,
+                                      "examples": [
+                                          100
+                                      ]
+                                  },
+                                  "channel": {
+                                      "$id": "#/properties/event_data/properties/payload/items/anyOf/0/properties/channel",
+                                      "type": "integer",
+                                      "title": "The channel schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": 0,
+                                      "examples": [
+                                          5
+                                      ]
+                                  },
+                                  "timestamp": {
+                                      "$id": "#/properties/event_data/properties/payload/items/anyOf/0/properties/timestamp",
+                                      "type": "integer",
+                                      "title": "The timestamp schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": 0,
+                                      "examples": [
+                                          1614196169569
+                                      ]
+                                  }
+                              },
+                              "additionalProperties": true
+                          }
+                      ]
+                  }
+              },
+              "gateways": {
+                  "$id": "#/properties/event_data/properties/gateways",
+                  "type": "array",
+                  "title": "The gateways schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": [],
+                  "examples": [
+                      [
+                          {
+                              "gweui": "000080029c493955",
+                              "time": 0,
+                              "rssi": -51,
+                              "snr": 11.3
+                          }
+                      ]
+                  ],
+                  "additionalItems": true,
+                  "items": {
+                      "$id": "#/properties/event_data/properties/gateways/items",
+                      "anyOf": [
+                          {
+                              "$id": "#/properties/event_data/properties/gateways/items/anyOf/0",
+                              "type": "object",
+                              "title": "The first anyOf schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": {},
+                              "examples": [
+                                  {
+                                      "gweui": "000080029c493955",
+                                      "time": 0,
+                                      "rssi": -51,
+                                      "snr": 11.3
+                                  }
+                              ],
+                              "required": [
+                                  "gweui",
+                                  "time",
+                                  "rssi",
+                                  "snr"
+                              ],
+                              "properties": {
+                                  "gweui": {
+                                      "$id": "#/properties/event_data/properties/gateways/items/anyOf/0/properties/gweui",
+                                      "type": "string",
+                                      "title": "The gweui schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": "",
+                                      "examples": [
+                                          "000080029c493955"
+                                      ]
+                                  },
+                                  "time": {
+                                      "$id": "#/properties/event_data/properties/gateways/items/anyOf/0/properties/time",
+                                      "type": "integer",
+                                      "title": "The time schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": 0,
+                                      "examples": [
+                                          0
+                                      ]
+                                  },
+                                  "rssi": {
+                                      "$id": "#/properties/event_data/properties/gateways/items/anyOf/0/properties/rssi",
+                                      "type": "integer",
+                                      "title": "The rssi schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": 0,
+                                      "examples": [
+                                          -51
+                                      ]
+                                  },
+                                  "snr": {
+                                      "$id": "#/properties/event_data/properties/gateways/items/anyOf/0/properties/snr",
+                                      "type": "number",
+                                      "title": "The snr schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": 0.0,
+                                      "examples": [
+                                          11.3
+                                      ]
+                                  }
+                              },
+                              "additionalProperties": true
+                          }
+                      ]
+                  }
+              },
+              "fcnt": {
+                  "$id": "#/properties/event_data/properties/fcnt",
+                  "type": "integer",
+                  "title": "The fcnt schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      12
+                  ]
+              },
+              "fport": {
+                  "$id": "#/properties/event_data/properties/fport",
+                  "type": "integer",
+                  "title": "The fport schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      6
+                  ]
+              },
+              "raw_payload": {
+                  "$id": "#/properties/event_data/properties/raw_payload",
+                  "type": "string",
+                  "title": "The raw_payload schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "AQEBHgijDKYAAAA="
+                  ]
+              },
+              "raw_format": {
+                  "$id": "#/properties/event_data/properties/raw_format",
+                  "type": "string",
+                  "title": "The raw_format schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "base64"
+                  ]
+              },
+              "client_id": {
+                  "$id": "#/properties/event_data/properties/client_id",
+                  "type": "string",
+                  "title": "The client_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "ebe4c760-d761-11ea-b2ab-f35fff94ad45"
+                  ]
+              },
+              "hardware_id": {
+                  "$id": "#/properties/event_data/properties/hardware_id",
+                  "type": "string",
+                  "title": "The hardware_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "00137a1000000abc"
+                  ]
+              },
+              "timestamp": {
+                  "$id": "#/properties/event_data/properties/timestamp",
+                  "type": "integer",
+                  "title": "The timestamp schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      1614196169569
+                  ]
+              },
+              "application_id": {
+                  "$id": "#/properties/event_data/properties/application_id",
+                  "type": "string",
+                  "title": "The application_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "simplysense"
+                  ]
+              },
+              "device_type_id": {
+                  "$id": "#/properties/event_data/properties/device_type_id",
+                  "type": "string",
+                  "title": "The device_type_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "26702500-32a0-11e8-867e-ddad6d07d21e"
+                  ]
+              }
+          },
+          "additionalProperties": true
+      },
+      "company": {
+          "$id": "#/properties/company",
+          "type": "object",
+          "title": "The company schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {
+                  "id": 6109,
+                  "address": "3333 Arapahoe Rd",
+                  "city": "Erie",
+                  "country": "United States",
+                  "created_at": "2020-08-05T21:23:48Z",
+                  "industry": "[\"Food & Beverage\"]",
+                  "latitude": 40.016926,
+                  "longitude": -105.10077,
+                  "name": "Safeway - ss pp",
+                  "state": "CO",
+                  "status": 0,
+                  "timezone": "America/Denver",
+                  "updated_at": "2020-08-05T21:23:48Z",
+                  "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+                  "zip": "80516"
+              }
+          ],
+          "required": [
+              "id",
+              "address",
+              "city",
+              "country",
+              "created_at",
+              "industry",
+              "latitude",
+              "longitude",
+              "name",
+              "state",
+              "status",
+              "timezone",
+              "updated_at",
+              "user_id",
+              "zip"
+          ],
+          "properties": {
+              "id": {
+                  "$id": "#/properties/company/properties/id",
+                  "type": "integer",
+                  "title": "The id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      6109
+                  ]
+              },
+              "address": {
+                  "$id": "#/properties/company/properties/address",
+                  "type": "string",
+                  "title": "The address schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "3333 Arapahoe Rd"
+                  ]
+              },
+              "city": {
+                  "$id": "#/properties/company/properties/city",
+                  "type": "string",
+                  "title": "The city schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Erie"
+                  ]
+              },
+              "country": {
+                  "$id": "#/properties/company/properties/country",
+                  "type": "string",
+                  "title": "The country schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "United States"
+                  ]
+              },
+              "created_at": {
+                  "$id": "#/properties/company/properties/created_at",
+                  "type": "string",
+                  "title": "The created_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2020-08-05T21:23:48Z"
+                  ]
+              },
+              "industry": {
+                  "$id": "#/properties/company/properties/industry",
+                  "type": "string",
+                  "title": "The industry schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "[\"Food & Beverage\"]"
+                  ]
+              },
+              "latitude": {
+                  "$id": "#/properties/company/properties/latitude",
+                  "type": "number",
+                  "title": "The latitude schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0.0,
+                  "examples": [
+                      40.016926
+                  ]
+              },
+              "longitude": {
+                  "$id": "#/properties/company/properties/longitude",
+                  "type": "number",
+                  "title": "The longitude schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0.0,
+                  "examples": [
+                      -105.10077
+                  ]
+              },
+              "name": {
+                  "$id": "#/properties/company/properties/name",
+                  "type": "string",
+                  "title": "The name schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Safeway - ss pp"
+                  ]
+              },
+              "state": {
+                  "$id": "#/properties/company/properties/state",
+                  "type": "string",
+                  "title": "The state schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "CO"
+                  ]
+              },
+              "status": {
+                  "$id": "#/properties/company/properties/status",
+                  "type": "integer",
+                  "title": "The status schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      0
+                  ]
+              },
+              "timezone": {
+                  "$id": "#/properties/company/properties/timezone",
+                  "type": "string",
+                  "title": "The timezone schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "America/Denver"
+                  ]
+              },
+              "updated_at": {
+                  "$id": "#/properties/company/properties/updated_at",
+                  "type": "string",
+                  "title": "The updated_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2020-08-05T21:23:48Z"
+                  ]
+              },
+              "user_id": {
+                  "$id": "#/properties/company/properties/user_id",
+                  "type": "string",
+                  "title": "The user_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0"
+                  ]
+              },
+              "zip": {
+                  "$id": "#/properties/company/properties/zip",
+                  "type": "string",
+                  "title": "The zip schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "80516"
+                  ]
+              }
+          },
+          "additionalProperties": true
+      },
+      "location": {
+          "$id": "#/properties/location",
+          "type": "object",
+          "title": "The location schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {
+                  "id": 5454,
+                  "address": "3333 Arapahoe Rd",
+                  "city": "Erie",
+                  "country": "United States",
+                  "created_at": "2020-08-05T21:23:49Z",
+                  "industry": "[\"Food & Beverage\"]",
+                  "latitude": 40.016926,
+                  "longitude": -105.10077,
+                  "name": "Safeway - ss pp",
+                  "state": "CO",
+                  "status": 0,
+                  "timezone": "America/Denver",
+                  "updated_at": "2020-08-05T21:23:49Z",
+                  "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+                  "zip": "80516",
+                  "company_id": 6109
+              }
+          ],
+          "required": [
+              "id",
+              "address",
+              "city",
+              "country",
+              "created_at",
+              "industry",
+              "latitude",
+              "longitude",
+              "name",
+              "state",
+              "status",
+              "timezone",
+              "updated_at",
+              "user_id",
+              "zip",
+              "company_id"
+          ],
+          "properties": {
+              "id": {
+                  "$id": "#/properties/location/properties/id",
+                  "type": "integer",
+                  "title": "The id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      5454
+                  ]
+              },
+              "address": {
+                  "$id": "#/properties/location/properties/address",
+                  "type": "string",
+                  "title": "The address schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "3333 Arapahoe Rd"
+                  ]
+              },
+              "city": {
+                  "$id": "#/properties/location/properties/city",
+                  "type": "string",
+                  "title": "The city schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Erie"
+                  ]
+              },
+              "country": {
+                  "$id": "#/properties/location/properties/country",
+                  "type": "string",
+                  "title": "The country schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "United States"
+                  ]
+              },
+              "created_at": {
+                  "$id": "#/properties/location/properties/created_at",
+                  "type": "string",
+                  "title": "The created_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2020-08-05T21:23:49Z"
+                  ]
+              },
+              "industry": {
+                  "$id": "#/properties/location/properties/industry",
+                  "type": "string",
+                  "title": "The industry schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "[\"Food & Beverage\"]"
+                  ]
+              },
+              "latitude": {
+                  "$id": "#/properties/location/properties/latitude",
+                  "type": "number",
+                  "title": "The latitude schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0.0,
+                  "examples": [
+                      40.016926
+                  ]
+              },
+              "longitude": {
+                  "$id": "#/properties/location/properties/longitude",
+                  "type": "number",
+                  "title": "The longitude schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0.0,
+                  "examples": [
+                      -105.10077
+                  ]
+              },
+              "name": {
+                  "$id": "#/properties/location/properties/name",
+                  "type": "string",
+                  "title": "The name schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Safeway - ss pp"
+                  ]
+              },
+              "state": {
+                  "$id": "#/properties/location/properties/state",
+                  "type": "string",
+                  "title": "The state schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "CO"
+                  ]
+              },
+              "status": {
+                  "$id": "#/properties/location/properties/status",
+                  "type": "integer",
+                  "title": "The status schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      0
+                  ]
+              },
+              "timezone": {
+                  "$id": "#/properties/location/properties/timezone",
+                  "type": "string",
+                  "title": "The timezone schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "America/Denver"
+                  ]
+              },
+              "updated_at": {
+                  "$id": "#/properties/location/properties/updated_at",
+                  "type": "string",
+                  "title": "The updated_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2020-08-05T21:23:49Z"
+                  ]
+              },
+              "user_id": {
+                  "$id": "#/properties/location/properties/user_id",
+                  "type": "string",
+                  "title": "The user_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0"
+                  ]
+              },
+              "zip": {
+                  "$id": "#/properties/location/properties/zip",
+                  "type": "string",
+                  "title": "The zip schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "80516"
+                  ]
+              },
+              "company_id": {
+                  "$id": "#/properties/location/properties/company_id",
+                  "type": "integer",
+                  "title": "The company_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      6109
+                  ]
+              }
+          },
+          "additionalProperties": true
+      },
+      "device_type": {
+          "$id": "#/properties/device_type",
+          "type": "object",
+          "title": "The device_type schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {
+                  "id": "26702500-32a0-11e8-867e-ddad6d07d21e",
+                  "application_id": "iotinabox",
+                  "category": "module",
+                  "codec": "lorawan.netvox.temp",
+                  "data_type": "",
+                  "description": "Netvox Temperature and Humidity Sensor",
+                  "manufacturer": "Netvox",
+                  "model": "R711",
+                  "name": "Netvox Temperature - IoT in a Box",
+                  "parent_constraint": "NOT_ALLOWED",
+                  "proxy_handler": "PrometheusClient",
+                  "subcategory": "lora",
+                  "transport_protocol": "lorawan",
+                  "version": "",
+                  "created_at": "2018-03-28T15:53:25Z",
+                  "updated_at": "2019-09-25T16:20:40Z"
+              }
+          ],
+          "required": [
+              "id",
+              "application_id",
+              "category",
+              "codec",
+              "data_type",
+              "description",
+              "manufacturer",
+              "model",
+              "name",
+              "parent_constraint",
+              "proxy_handler",
+              "subcategory",
+              "transport_protocol",
+              "version",
+              "created_at",
+              "updated_at"
+          ],
+          "properties": {
+              "id": {
+                  "$id": "#/properties/device_type/properties/id",
+                  "type": "string",
+                  "title": "The id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "26702500-32a0-11e8-867e-ddad6d07d21e"
+                  ]
+              },
+              "application_id": {
+                  "$id": "#/properties/device_type/properties/application_id",
+                  "type": "string",
+                  "title": "The application_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "iotinabox"
+                  ]
+              },
+              "category": {
+                  "$id": "#/properties/device_type/properties/category",
+                  "type": "string",
+                  "title": "The category schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "module"
+                  ]
+              },
+              "codec": {
+                  "$id": "#/properties/device_type/properties/codec",
+                  "type": "string",
+                  "title": "The codec schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "lorawan.netvox.temp"
+                  ]
+              },
+              "data_type": {
+                  "$id": "#/properties/device_type/properties/data_type",
+                  "type": "string",
+                  "title": "The data_type schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      ""
+                  ]
+              },
+              "description": {
+                  "$id": "#/properties/device_type/properties/description",
+                  "type": "string",
+                  "title": "The description schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Netvox Temperature and Humidity Sensor"
+                  ]
+              },
+              "manufacturer": {
+                  "$id": "#/properties/device_type/properties/manufacturer",
+                  "type": "string",
+                  "title": "The manufacturer schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Netvox"
+                  ]
+              },
+              "model": {
+                  "$id": "#/properties/device_type/properties/model",
+                  "type": "string",
+                  "title": "The model schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "R711"
+                  ]
+              },
+              "name": {
+                  "$id": "#/properties/device_type/properties/name",
+                  "type": "string",
+                  "title": "The name schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Netvox Temperature - IoT in a Box"
+                  ]
+              },
+              "parent_constraint": {
+                  "$id": "#/properties/device_type/properties/parent_constraint",
+                  "type": "string",
+                  "title": "The parent_constraint schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "NOT_ALLOWED"
+                  ]
+              },
+              "proxy_handler": {
+                  "$id": "#/properties/device_type/properties/proxy_handler",
+                  "type": "string",
+                  "title": "The proxy_handler schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "PrometheusClient"
+                  ]
+              },
+              "subcategory": {
+                  "$id": "#/properties/device_type/properties/subcategory",
+                  "type": "string",
+                  "title": "The subcategory schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "lora"
+                  ]
+              },
+              "transport_protocol": {
+                  "$id": "#/properties/device_type/properties/transport_protocol",
+                  "type": "string",
+                  "title": "The transport_protocol schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "lorawan"
+                  ]
+              },
+              "version": {
+                  "$id": "#/properties/device_type/properties/version",
+                  "type": "string",
+                  "title": "The version schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      ""
+                  ]
+              },
+              "created_at": {
+                  "$id": "#/properties/device_type/properties/created_at",
+                  "type": "string",
+                  "title": "The created_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2018-03-28T15:53:25Z"
+                  ]
+              },
+              "updated_at": {
+                  "$id": "#/properties/device_type/properties/updated_at",
+                  "type": "string",
+                  "title": "The updated_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2019-09-25T16:20:40Z"
+                  ]
+              }
+          },
+          "additionalProperties": true
+      },
+      "device": {
+          "$id": "#/properties/device",
+          "type": "object",
+          "title": "The device schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {
+                  "id": 70078980,
+                  "thing_name": "Wireless az - ss pp",
+                  "created_at": "2021-02-23T16:49:40Z",
+                  "updated_at": "2021-02-23T16:49:41Z",
+                  "status": 0
+              }
+          ],
+          "required": [
+              "id",
+              "thing_name",
+              "created_at",
+              "updated_at",
+              "status"
+          ],
+          "properties": {
+              "id": {
+                  "$id": "#/properties/device/properties/id",
+                  "type": "integer",
+                  "title": "The id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      70078980
+                  ]
+              },
+              "thing_name": {
+                  "$id": "#/properties/device/properties/thing_name",
+                  "type": "string",
+                  "title": "The thing_name schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Wireless az - ss pp"
+                  ]
+              },
+              "created_at": {
+                  "$id": "#/properties/device/properties/created_at",
+                  "type": "string",
+                  "title": "The created_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2021-02-23T16:49:40Z"
+                  ]
+              },
+              "updated_at": {
+                  "$id": "#/properties/device/properties/updated_at",
+                  "type": "string",
+                  "title": "The updated_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2021-02-23T16:49:41Z"
+                  ]
+              },
+              "status": {
+                  "$id": "#/properties/device/properties/status",
+                  "type": "integer",
+                  "title": "The status schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      0
+                  ]
+              }
+          },
+          "additionalProperties": true
+      }
+  },
+  "additionalProperties": true
+}

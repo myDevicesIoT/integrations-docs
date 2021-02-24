@@ -1,0 +1,1355 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/alert-schema.json",
+  "type": "object",
+  "title": "Alert Event JSON Schema",
+  "description": "Alert Event JSON Schema.",
+  "default": {},
+  "examples": [
+      {
+          "event_type": "alert",
+          "event_data": {
+              "userId": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+              "applicationId": "simplysense",
+              "clientId": "ebe4c760-d761-11ea-b2ab-f35fff94ad45",
+              "thingId": "e3d81db0-75f9-11eb-8585-01d3d033571a",
+              "sensorId": "e42be300-75f9-11eb-8585-01d3d033571a",
+              "ruleId": "913ca554-cce7-441e-98b8-601d6b3fd348",
+              "eventType": "alert-state-changed",
+              "totalTriggered": 1,
+              "hardwareId": "00137a1000000ghi",
+              "triggered": true,
+              "value": "0",
+              "timestamp": "1614201509775",
+              "triggerData": {
+                  "delay": {
+                      "count": 1,
+                      "time": 600000
+                  },
+                  "location": {
+                      "lat": null,
+                      "lon": null,
+                      "ts": "1614201509775"
+                  },
+                  "trigger_reading": 0,
+                  "trigger_type": "trigger",
+                  "trigger_unit": "d",
+                  "triggers": [
+                      {
+                          "conditions": [
+                              {
+                                  "operator": "eq",
+                                  "value": 0
+                              }
+                          ],
+                          "trigger_reading": 0,
+                          "trigger_unit": "d",
+                          "triggers_combination": "OR"
+                      }
+                  ],
+                  "triggers_combination": "OR"
+              },
+              "title": "Leak ttn - pp ss No Leak Detected Alert"
+          },
+          "company": {
+              "id": 6109,
+              "address": "3333 Arapahoe Rd",
+              "city": "Erie",
+              "country": "United States",
+              "created_at": "2020-08-05T21:23:48Z",
+              "industry": "[\"Food & Beverage\"]",
+              "latitude": 40.016926,
+              "longitude": -105.10077,
+              "name": "Safeway - ss pp",
+              "state": "CO",
+              "status": 0,
+              "timezone": "America/Denver",
+              "updated_at": "2020-08-05T21:23:48Z",
+              "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+              "zip": "80516"
+          },
+          "location": {
+              "id": 5454,
+              "address": "3333 Arapahoe Rd",
+              "city": "Erie",
+              "country": "United States",
+              "created_at": "2020-08-05T21:23:49Z",
+              "industry": "[\"Food & Beverage\"]",
+              "latitude": 40.016926,
+              "longitude": -105.10077,
+              "name": "Safeway - ss pp",
+              "state": "CO",
+              "status": 0,
+              "timezone": "America/Denver",
+              "updated_at": "2020-08-05T21:23:49Z",
+              "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+              "zip": "80516",
+              "company_id": 6109
+          },
+          "device_type": {
+              "id": "299fbd30-2733-11e8-bd80-0961dfa396b4",
+              "application_id": "iotinabox",
+              "category": "module",
+              "codec": "lorawan.netvox.leak",
+              "data_type": "",
+              "description": "NETVOX LORAWAN WATER LEAK SENSOR R311W US915/AS923/EU868",
+              "manufacturer": "NETVOX",
+              "model": "R311W",
+              "name": "Netvox Leak - IoT in a Box",
+              "parent_constraint": "NOT_ALLOWED",
+              "proxy_handler": "PrometheusClient",
+              "subcategory": "lora",
+              "transport_protocol": "lorawan",
+              "version": "",
+              "created_at": "2018-03-14T02:55:32Z",
+              "updated_at": "2019-09-25T16:20:40Z"
+          },
+          "device": {
+              "id": 70078985,
+              "thing_name": "Leak ttn - pp ss",
+              "created_at": "2021-02-23T17:09:30Z",
+              "updated_at": "2021-02-23T17:09:30Z",
+              "status": 0
+          }
+      }
+  ],
+  "required": [
+      "event_type",
+      "event_data",
+      "company",
+      "location",
+      "device_type",
+      "device"
+  ],
+  "properties": {
+      "event_type": {
+          "$id": "#/properties/event_type",
+          "type": "string",
+          "title": "The event_type schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+              "alert"
+          ]
+      },
+      "event_data": {
+          "$id": "#/properties/event_data",
+          "type": "object",
+          "title": "The event_data schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {
+                  "userId": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+                  "applicationId": "simplysense",
+                  "clientId": "ebe4c760-d761-11ea-b2ab-f35fff94ad45",
+                  "thingId": "e3d81db0-75f9-11eb-8585-01d3d033571a",
+                  "sensorId": "e42be300-75f9-11eb-8585-01d3d033571a",
+                  "ruleId": "913ca554-cce7-441e-98b8-601d6b3fd348",
+                  "eventType": "alert-state-changed",
+                  "totalTriggered": 1,
+                  "hardwareId": "00137a1000000ghi",
+                  "triggered": true,
+                  "value": "0",
+                  "timestamp": "1614201509775",
+                  "triggerData": {
+                      "delay": {
+                          "count": 1,
+                          "time": 600000
+                      },
+                      "location": {
+                          "lat": null,
+                          "lon": null,
+                          "ts": "1614201509775"
+                      },
+                      "trigger_reading": 0,
+                      "trigger_type": "trigger",
+                      "trigger_unit": "d",
+                      "triggers": [
+                          {
+                              "conditions": [
+                                  {
+                                      "operator": "eq",
+                                      "value": 0
+                                  }
+                              ],
+                              "trigger_reading": 0,
+                              "trigger_unit": "d",
+                              "triggers_combination": "OR"
+                          }
+                      ],
+                      "triggers_combination": "OR"
+                  },
+                  "title": "Leak ttn - pp ss No Leak Detected Alert"
+              }
+          ],
+          "required": [
+              "userId",
+              "applicationId",
+              "clientId",
+              "thingId",
+              "sensorId",
+              "ruleId",
+              "eventType",
+              "totalTriggered",
+              "hardwareId",
+              "triggered",
+              "value",
+              "timestamp",
+              "triggerData",
+              "title"
+          ],
+          "properties": {
+              "userId": {
+                  "$id": "#/properties/event_data/properties/userId",
+                  "type": "string",
+                  "title": "The userId schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0"
+                  ]
+              },
+              "applicationId": {
+                  "$id": "#/properties/event_data/properties/applicationId",
+                  "type": "string",
+                  "title": "The applicationId schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "simplysense"
+                  ]
+              },
+              "clientId": {
+                  "$id": "#/properties/event_data/properties/clientId",
+                  "type": "string",
+                  "title": "The clientId schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "ebe4c760-d761-11ea-b2ab-f35fff94ad45"
+                  ]
+              },
+              "thingId": {
+                  "$id": "#/properties/event_data/properties/thingId",
+                  "type": "string",
+                  "title": "The thingId schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "e3d81db0-75f9-11eb-8585-01d3d033571a"
+                  ]
+              },
+              "sensorId": {
+                  "$id": "#/properties/event_data/properties/sensorId",
+                  "type": "string",
+                  "title": "The sensorId schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "e42be300-75f9-11eb-8585-01d3d033571a"
+                  ]
+              },
+              "ruleId": {
+                  "$id": "#/properties/event_data/properties/ruleId",
+                  "type": "string",
+                  "title": "The ruleId schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "913ca554-cce7-441e-98b8-601d6b3fd348"
+                  ]
+              },
+              "eventType": {
+                  "$id": "#/properties/event_data/properties/eventType",
+                  "type": "string",
+                  "title": "The eventType schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "alert-state-changed"
+                  ]
+              },
+              "totalTriggered": {
+                  "$id": "#/properties/event_data/properties/totalTriggered",
+                  "type": "integer",
+                  "title": "The totalTriggered schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      1
+                  ]
+              },
+              "hardwareId": {
+                  "$id": "#/properties/event_data/properties/hardwareId",
+                  "type": "string",
+                  "title": "The hardwareId schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "00137a1000000ghi"
+                  ]
+              },
+              "triggered": {
+                  "$id": "#/properties/event_data/properties/triggered",
+                  "type": "boolean",
+                  "title": "The triggered schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": false,
+                  "examples": [
+                      true
+                  ]
+              },
+              "value": {
+                  "$id": "#/properties/event_data/properties/value",
+                  "type": "string",
+                  "title": "The value schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "0"
+                  ]
+              },
+              "timestamp": {
+                  "$id": "#/properties/event_data/properties/timestamp",
+                  "type": "string",
+                  "title": "The timestamp schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "1614201509775"
+                  ]
+              },
+              "triggerData": {
+                  "$id": "#/properties/event_data/properties/triggerData",
+                  "type": "object",
+                  "title": "The triggerData schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": {},
+                  "examples": [
+                      {
+                          "delay": {
+                              "count": 1,
+                              "time": 600000
+                          },
+                          "location": {
+                              "lat": null,
+                              "lon": null,
+                              "ts": "1614201509775"
+                          },
+                          "trigger_reading": 0,
+                          "trigger_type": "trigger",
+                          "trigger_unit": "d",
+                          "triggers": [
+                              {
+                                  "conditions": [
+                                      {
+                                          "operator": "eq",
+                                          "value": 0
+                                      }
+                                  ],
+                                  "trigger_reading": 0,
+                                  "trigger_unit": "d",
+                                  "triggers_combination": "OR"
+                              }
+                          ],
+                          "triggers_combination": "OR"
+                      }
+                  ],
+                  "required": [
+                      "delay",
+                      "location",
+                      "trigger_reading",
+                      "trigger_type",
+                      "trigger_unit",
+                      "triggers",
+                      "triggers_combination"
+                  ],
+                  "properties": {
+                      "delay": {
+                          "$id": "#/properties/event_data/properties/triggerData/properties/delay",
+                          "type": "object",
+                          "title": "The delay schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": {},
+                          "examples": [
+                              {
+                                  "count": 1,
+                                  "time": 600000
+                              }
+                          ],
+                          "required": [
+                              "count",
+                              "time"
+                          ],
+                          "properties": {
+                              "count": {
+                                  "$id": "#/properties/event_data/properties/triggerData/properties/delay/properties/count",
+                                  "type": "integer",
+                                  "title": "The count schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": 0,
+                                  "examples": [
+                                      1
+                                  ]
+                              },
+                              "time": {
+                                  "$id": "#/properties/event_data/properties/triggerData/properties/delay/properties/time",
+                                  "type": "integer",
+                                  "title": "The time schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": 0,
+                                  "examples": [
+                                      600000
+                                  ]
+                              }
+                          },
+                          "additionalProperties": true
+                      },
+                      "location": {
+                          "$id": "#/properties/event_data/properties/triggerData/properties/location",
+                          "type": "object",
+                          "title": "The location schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": {},
+                          "examples": [
+                              {
+                                  "lat": null,
+                                  "lon": null,
+                                  "ts": "1614201509775"
+                              }
+                          ],
+                          "required": [
+                              "lat",
+                              "lon",
+                              "ts"
+                          ],
+                          "properties": {
+                              "lat": {
+                                  "$id": "#/properties/event_data/properties/triggerData/properties/location/properties/lat",
+                                  "type": "null",
+                                  "title": "The lat schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": null,
+                                  "examples": [
+                                      null
+                                  ]
+                              },
+                              "lon": {
+                                  "$id": "#/properties/event_data/properties/triggerData/properties/location/properties/lon",
+                                  "type": "null",
+                                  "title": "The lon schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": null,
+                                  "examples": [
+                                      null
+                                  ]
+                              },
+                              "ts": {
+                                  "$id": "#/properties/event_data/properties/triggerData/properties/location/properties/ts",
+                                  "type": "string",
+                                  "title": "The ts schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": "",
+                                  "examples": [
+                                      "1614201509775"
+                                  ]
+                              }
+                          },
+                          "additionalProperties": true
+                      },
+                      "trigger_reading": {
+                          "$id": "#/properties/event_data/properties/triggerData/properties/trigger_reading",
+                          "type": "integer",
+                          "title": "The trigger_reading schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": 0,
+                          "examples": [
+                              0
+                          ]
+                      },
+                      "trigger_type": {
+                          "$id": "#/properties/event_data/properties/triggerData/properties/trigger_type",
+                          "type": "string",
+                          "title": "The trigger_type schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": "",
+                          "examples": [
+                              "trigger"
+                          ]
+                      },
+                      "trigger_unit": {
+                          "$id": "#/properties/event_data/properties/triggerData/properties/trigger_unit",
+                          "type": "string",
+                          "title": "The trigger_unit schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": "",
+                          "examples": [
+                              "d"
+                          ]
+                      },
+                      "triggers": {
+                          "$id": "#/properties/event_data/properties/triggerData/properties/triggers",
+                          "type": "array",
+                          "title": "The triggers schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": [],
+                          "examples": [
+                              [
+                                  {
+                                      "conditions": [
+                                          {
+                                              "operator": "eq",
+                                              "value": 0
+                                          }
+                                      ],
+                                      "trigger_reading": 0,
+                                      "trigger_unit": "d",
+                                      "triggers_combination": "OR"
+                                  }
+                              ]
+                          ],
+                          "additionalItems": true,
+                          "items": {
+                              "$id": "#/properties/event_data/properties/triggerData/properties/triggers/items",
+                              "anyOf": [
+                                  {
+                                      "$id": "#/properties/event_data/properties/triggerData/properties/triggers/items/anyOf/0",
+                                      "type": "object",
+                                      "title": "The first anyOf schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": {},
+                                      "examples": [
+                                          {
+                                              "conditions": [
+                                                  {
+                                                      "operator": "eq",
+                                                      "value": 0
+                                                  }
+                                              ],
+                                              "trigger_reading": 0,
+                                              "trigger_unit": "d",
+                                              "triggers_combination": "OR"
+                                          }
+                                      ],
+                                      "required": [
+                                          "conditions",
+                                          "trigger_reading",
+                                          "trigger_unit",
+                                          "triggers_combination"
+                                      ],
+                                      "properties": {
+                                          "conditions": {
+                                              "$id": "#/properties/event_data/properties/triggerData/properties/triggers/items/anyOf/0/properties/conditions",
+                                              "type": "array",
+                                              "title": "The conditions schema",
+                                              "description": "An explanation about the purpose of this instance.",
+                                              "default": [],
+                                              "examples": [
+                                                  [
+                                                      {
+                                                          "operator": "eq",
+                                                          "value": 0
+                                                      }
+                                                  ]
+                                              ],
+                                              "additionalItems": true,
+                                              "items": {
+                                                  "$id": "#/properties/event_data/properties/triggerData/properties/triggers/items/anyOf/0/properties/conditions/items",
+                                                  "anyOf": [
+                                                      {
+                                                          "$id": "#/properties/event_data/properties/triggerData/properties/triggers/items/anyOf/0/properties/conditions/items/anyOf/0",
+                                                          "type": "object",
+                                                          "title": "The first anyOf schema",
+                                                          "description": "An explanation about the purpose of this instance.",
+                                                          "default": {},
+                                                          "examples": [
+                                                              {
+                                                                  "operator": "eq",
+                                                                  "value": 0
+                                                              }
+                                                          ],
+                                                          "required": [
+                                                              "operator",
+                                                              "value"
+                                                          ],
+                                                          "properties": {
+                                                              "operator": {
+                                                                  "$id": "#/properties/event_data/properties/triggerData/properties/triggers/items/anyOf/0/properties/conditions/items/anyOf/0/properties/operator",
+                                                                  "type": "string",
+                                                                  "title": "The operator schema",
+                                                                  "description": "An explanation about the purpose of this instance.",
+                                                                  "default": "",
+                                                                  "examples": [
+                                                                      "eq"
+                                                                  ]
+                                                              },
+                                                              "value": {
+                                                                  "$id": "#/properties/event_data/properties/triggerData/properties/triggers/items/anyOf/0/properties/conditions/items/anyOf/0/properties/value",
+                                                                  "type": "integer",
+                                                                  "title": "The value schema",
+                                                                  "description": "An explanation about the purpose of this instance.",
+                                                                  "default": 0,
+                                                                  "examples": [
+                                                                      0
+                                                                  ]
+                                                              }
+                                                          },
+                                                          "additionalProperties": true
+                                                      }
+                                                  ]
+                                              }
+                                          },
+                                          "trigger_reading": {
+                                              "$id": "#/properties/event_data/properties/triggerData/properties/triggers/items/anyOf/0/properties/trigger_reading",
+                                              "type": "integer",
+                                              "title": "The trigger_reading schema",
+                                              "description": "An explanation about the purpose of this instance.",
+                                              "default": 0,
+                                              "examples": [
+                                                  0
+                                              ]
+                                          },
+                                          "trigger_unit": {
+                                              "$id": "#/properties/event_data/properties/triggerData/properties/triggers/items/anyOf/0/properties/trigger_unit",
+                                              "type": "string",
+                                              "title": "The trigger_unit schema",
+                                              "description": "An explanation about the purpose of this instance.",
+                                              "default": "",
+                                              "examples": [
+                                                  "d"
+                                              ]
+                                          },
+                                          "triggers_combination": {
+                                              "$id": "#/properties/event_data/properties/triggerData/properties/triggers/items/anyOf/0/properties/triggers_combination",
+                                              "type": "string",
+                                              "title": "The triggers_combination schema",
+                                              "description": "An explanation about the purpose of this instance.",
+                                              "default": "",
+                                              "examples": [
+                                                  "OR"
+                                              ]
+                                          }
+                                      },
+                                      "additionalProperties": true
+                                  }
+                              ]
+                          }
+                      },
+                      "triggers_combination": {
+                          "$id": "#/properties/event_data/properties/triggerData/properties/triggers_combination",
+                          "type": "string",
+                          "title": "The triggers_combination schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": "",
+                          "examples": [
+                              "OR"
+                          ]
+                      }
+                  },
+                  "additionalProperties": true
+              },
+              "title": {
+                  "$id": "#/properties/event_data/properties/title",
+                  "type": "string",
+                  "title": "The title schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Leak ttn - pp ss No Leak Detected Alert"
+                  ]
+              }
+          },
+          "additionalProperties": true
+      },
+      "company": {
+          "$id": "#/properties/company",
+          "type": "object",
+          "title": "The company schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {
+                  "id": 6109,
+                  "address": "3333 Arapahoe Rd",
+                  "city": "Erie",
+                  "country": "United States",
+                  "created_at": "2020-08-05T21:23:48Z",
+                  "industry": "[\"Food & Beverage\"]",
+                  "latitude": 40.016926,
+                  "longitude": -105.10077,
+                  "name": "Safeway - ss pp",
+                  "state": "CO",
+                  "status": 0,
+                  "timezone": "America/Denver",
+                  "updated_at": "2020-08-05T21:23:48Z",
+                  "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+                  "zip": "80516"
+              }
+          ],
+          "required": [
+              "id",
+              "address",
+              "city",
+              "country",
+              "created_at",
+              "industry",
+              "latitude",
+              "longitude",
+              "name",
+              "state",
+              "status",
+              "timezone",
+              "updated_at",
+              "user_id",
+              "zip"
+          ],
+          "properties": {
+              "id": {
+                  "$id": "#/properties/company/properties/id",
+                  "type": "integer",
+                  "title": "The id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      6109
+                  ]
+              },
+              "address": {
+                  "$id": "#/properties/company/properties/address",
+                  "type": "string",
+                  "title": "The address schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "3333 Arapahoe Rd"
+                  ]
+              },
+              "city": {
+                  "$id": "#/properties/company/properties/city",
+                  "type": "string",
+                  "title": "The city schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Erie"
+                  ]
+              },
+              "country": {
+                  "$id": "#/properties/company/properties/country",
+                  "type": "string",
+                  "title": "The country schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "United States"
+                  ]
+              },
+              "created_at": {
+                  "$id": "#/properties/company/properties/created_at",
+                  "type": "string",
+                  "title": "The created_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2020-08-05T21:23:48Z"
+                  ]
+              },
+              "industry": {
+                  "$id": "#/properties/company/properties/industry",
+                  "type": "string",
+                  "title": "The industry schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "[\"Food & Beverage\"]"
+                  ]
+              },
+              "latitude": {
+                  "$id": "#/properties/company/properties/latitude",
+                  "type": "number",
+                  "title": "The latitude schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0.0,
+                  "examples": [
+                      40.016926
+                  ]
+              },
+              "longitude": {
+                  "$id": "#/properties/company/properties/longitude",
+                  "type": "number",
+                  "title": "The longitude schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0.0,
+                  "examples": [
+                      -105.10077
+                  ]
+              },
+              "name": {
+                  "$id": "#/properties/company/properties/name",
+                  "type": "string",
+                  "title": "The name schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Safeway - ss pp"
+                  ]
+              },
+              "state": {
+                  "$id": "#/properties/company/properties/state",
+                  "type": "string",
+                  "title": "The state schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "CO"
+                  ]
+              },
+              "status": {
+                  "$id": "#/properties/company/properties/status",
+                  "type": "integer",
+                  "title": "The status schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      0
+                  ]
+              },
+              "timezone": {
+                  "$id": "#/properties/company/properties/timezone",
+                  "type": "string",
+                  "title": "The timezone schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "America/Denver"
+                  ]
+              },
+              "updated_at": {
+                  "$id": "#/properties/company/properties/updated_at",
+                  "type": "string",
+                  "title": "The updated_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2020-08-05T21:23:48Z"
+                  ]
+              },
+              "user_id": {
+                  "$id": "#/properties/company/properties/user_id",
+                  "type": "string",
+                  "title": "The user_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0"
+                  ]
+              },
+              "zip": {
+                  "$id": "#/properties/company/properties/zip",
+                  "type": "string",
+                  "title": "The zip schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "80516"
+                  ]
+              }
+          },
+          "additionalProperties": true
+      },
+      "location": {
+          "$id": "#/properties/location",
+          "type": "object",
+          "title": "The location schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {
+                  "id": 5454,
+                  "address": "3333 Arapahoe Rd",
+                  "city": "Erie",
+                  "country": "United States",
+                  "created_at": "2020-08-05T21:23:49Z",
+                  "industry": "[\"Food & Beverage\"]",
+                  "latitude": 40.016926,
+                  "longitude": -105.10077,
+                  "name": "Safeway - ss pp",
+                  "state": "CO",
+                  "status": 0,
+                  "timezone": "America/Denver",
+                  "updated_at": "2020-08-05T21:23:49Z",
+                  "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+                  "zip": "80516",
+                  "company_id": 6109
+              }
+          ],
+          "required": [
+              "id",
+              "address",
+              "city",
+              "country",
+              "created_at",
+              "industry",
+              "latitude",
+              "longitude",
+              "name",
+              "state",
+              "status",
+              "timezone",
+              "updated_at",
+              "user_id",
+              "zip",
+              "company_id"
+          ],
+          "properties": {
+              "id": {
+                  "$id": "#/properties/location/properties/id",
+                  "type": "integer",
+                  "title": "The id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      5454
+                  ]
+              },
+              "address": {
+                  "$id": "#/properties/location/properties/address",
+                  "type": "string",
+                  "title": "The address schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "3333 Arapahoe Rd"
+                  ]
+              },
+              "city": {
+                  "$id": "#/properties/location/properties/city",
+                  "type": "string",
+                  "title": "The city schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Erie"
+                  ]
+              },
+              "country": {
+                  "$id": "#/properties/location/properties/country",
+                  "type": "string",
+                  "title": "The country schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "United States"
+                  ]
+              },
+              "created_at": {
+                  "$id": "#/properties/location/properties/created_at",
+                  "type": "string",
+                  "title": "The created_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2020-08-05T21:23:49Z"
+                  ]
+              },
+              "industry": {
+                  "$id": "#/properties/location/properties/industry",
+                  "type": "string",
+                  "title": "The industry schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "[\"Food & Beverage\"]"
+                  ]
+              },
+              "latitude": {
+                  "$id": "#/properties/location/properties/latitude",
+                  "type": "number",
+                  "title": "The latitude schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0.0,
+                  "examples": [
+                      40.016926
+                  ]
+              },
+              "longitude": {
+                  "$id": "#/properties/location/properties/longitude",
+                  "type": "number",
+                  "title": "The longitude schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0.0,
+                  "examples": [
+                      -105.10077
+                  ]
+              },
+              "name": {
+                  "$id": "#/properties/location/properties/name",
+                  "type": "string",
+                  "title": "The name schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Safeway - ss pp"
+                  ]
+              },
+              "state": {
+                  "$id": "#/properties/location/properties/state",
+                  "type": "string",
+                  "title": "The state schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "CO"
+                  ]
+              },
+              "status": {
+                  "$id": "#/properties/location/properties/status",
+                  "type": "integer",
+                  "title": "The status schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      0
+                  ]
+              },
+              "timezone": {
+                  "$id": "#/properties/location/properties/timezone",
+                  "type": "string",
+                  "title": "The timezone schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "America/Denver"
+                  ]
+              },
+              "updated_at": {
+                  "$id": "#/properties/location/properties/updated_at",
+                  "type": "string",
+                  "title": "The updated_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2020-08-05T21:23:49Z"
+                  ]
+              },
+              "user_id": {
+                  "$id": "#/properties/location/properties/user_id",
+                  "type": "string",
+                  "title": "The user_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0"
+                  ]
+              },
+              "zip": {
+                  "$id": "#/properties/location/properties/zip",
+                  "type": "string",
+                  "title": "The zip schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "80516"
+                  ]
+              },
+              "company_id": {
+                  "$id": "#/properties/location/properties/company_id",
+                  "type": "integer",
+                  "title": "The company_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      6109
+                  ]
+              }
+          },
+          "additionalProperties": true
+      },
+      "device_type": {
+          "$id": "#/properties/device_type",
+          "type": "object",
+          "title": "The device_type schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {
+                  "id": "299fbd30-2733-11e8-bd80-0961dfa396b4",
+                  "application_id": "iotinabox",
+                  "category": "module",
+                  "codec": "lorawan.netvox.leak",
+                  "data_type": "",
+                  "description": "NETVOX LORAWAN WATER LEAK SENSOR R311W US915/AS923/EU868",
+                  "manufacturer": "NETVOX",
+                  "model": "R311W",
+                  "name": "Netvox Leak - IoT in a Box",
+                  "parent_constraint": "NOT_ALLOWED",
+                  "proxy_handler": "PrometheusClient",
+                  "subcategory": "lora",
+                  "transport_protocol": "lorawan",
+                  "version": "",
+                  "created_at": "2018-03-14T02:55:32Z",
+                  "updated_at": "2019-09-25T16:20:40Z"
+              }
+          ],
+          "required": [
+              "id",
+              "application_id",
+              "category",
+              "codec",
+              "data_type",
+              "description",
+              "manufacturer",
+              "model",
+              "name",
+              "parent_constraint",
+              "proxy_handler",
+              "subcategory",
+              "transport_protocol",
+              "version",
+              "created_at",
+              "updated_at"
+          ],
+          "properties": {
+              "id": {
+                  "$id": "#/properties/device_type/properties/id",
+                  "type": "string",
+                  "title": "The id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "299fbd30-2733-11e8-bd80-0961dfa396b4"
+                  ]
+              },
+              "application_id": {
+                  "$id": "#/properties/device_type/properties/application_id",
+                  "type": "string",
+                  "title": "The application_id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "iotinabox"
+                  ]
+              },
+              "category": {
+                  "$id": "#/properties/device_type/properties/category",
+                  "type": "string",
+                  "title": "The category schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "module"
+                  ]
+              },
+              "codec": {
+                  "$id": "#/properties/device_type/properties/codec",
+                  "type": "string",
+                  "title": "The codec schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "lorawan.netvox.leak"
+                  ]
+              },
+              "data_type": {
+                  "$id": "#/properties/device_type/properties/data_type",
+                  "type": "string",
+                  "title": "The data_type schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      ""
+                  ]
+              },
+              "description": {
+                  "$id": "#/properties/device_type/properties/description",
+                  "type": "string",
+                  "title": "The description schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "NETVOX LORAWAN WATER LEAK SENSOR R311W US915/AS923/EU868"
+                  ]
+              },
+              "manufacturer": {
+                  "$id": "#/properties/device_type/properties/manufacturer",
+                  "type": "string",
+                  "title": "The manufacturer schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "NETVOX"
+                  ]
+              },
+              "model": {
+                  "$id": "#/properties/device_type/properties/model",
+                  "type": "string",
+                  "title": "The model schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "R311W"
+                  ]
+              },
+              "name": {
+                  "$id": "#/properties/device_type/properties/name",
+                  "type": "string",
+                  "title": "The name schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Netvox Leak - IoT in a Box"
+                  ]
+              },
+              "parent_constraint": {
+                  "$id": "#/properties/device_type/properties/parent_constraint",
+                  "type": "string",
+                  "title": "The parent_constraint schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "NOT_ALLOWED"
+                  ]
+              },
+              "proxy_handler": {
+                  "$id": "#/properties/device_type/properties/proxy_handler",
+                  "type": "string",
+                  "title": "The proxy_handler schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "PrometheusClient"
+                  ]
+              },
+              "subcategory": {
+                  "$id": "#/properties/device_type/properties/subcategory",
+                  "type": "string",
+                  "title": "The subcategory schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "lora"
+                  ]
+              },
+              "transport_protocol": {
+                  "$id": "#/properties/device_type/properties/transport_protocol",
+                  "type": "string",
+                  "title": "The transport_protocol schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "lorawan"
+                  ]
+              },
+              "version": {
+                  "$id": "#/properties/device_type/properties/version",
+                  "type": "string",
+                  "title": "The version schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      ""
+                  ]
+              },
+              "created_at": {
+                  "$id": "#/properties/device_type/properties/created_at",
+                  "type": "string",
+                  "title": "The created_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2018-03-14T02:55:32Z"
+                  ]
+              },
+              "updated_at": {
+                  "$id": "#/properties/device_type/properties/updated_at",
+                  "type": "string",
+                  "title": "The updated_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2019-09-25T16:20:40Z"
+                  ]
+              }
+          },
+          "additionalProperties": true
+      },
+      "device": {
+          "$id": "#/properties/device",
+          "type": "object",
+          "title": "The device schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+              {
+                  "id": 70078985,
+                  "thing_name": "Leak ttn - pp ss",
+                  "created_at": "2021-02-23T17:09:30Z",
+                  "updated_at": "2021-02-23T17:09:30Z",
+                  "status": 0
+              }
+          ],
+          "required": [
+              "id",
+              "thing_name",
+              "created_at",
+              "updated_at",
+              "status"
+          ],
+          "properties": {
+              "id": {
+                  "$id": "#/properties/device/properties/id",
+                  "type": "integer",
+                  "title": "The id schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      70078985
+                  ]
+              },
+              "thing_name": {
+                  "$id": "#/properties/device/properties/thing_name",
+                  "type": "string",
+                  "title": "The thing_name schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "Leak ttn - pp ss"
+                  ]
+              },
+              "created_at": {
+                  "$id": "#/properties/device/properties/created_at",
+                  "type": "string",
+                  "title": "The created_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2021-02-23T17:09:30Z"
+                  ]
+              },
+              "updated_at": {
+                  "$id": "#/properties/device/properties/updated_at",
+                  "type": "string",
+                  "title": "The updated_at schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                      "2021-02-23T17:09:30Z"
+                  ]
+              },
+              "status": {
+                  "$id": "#/properties/device/properties/status",
+                  "type": "integer",
+                  "title": "The status schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                      0
+                  ]
+              }
+          },
+          "additionalProperties": true
+      }
+  },
+  "additionalProperties": true
+}
