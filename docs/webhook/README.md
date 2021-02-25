@@ -16,6 +16,12 @@ Use the following steps to setup your new webhook on the IoT in a Box side.
 3. Enter the following information to complete the integration:
     - **Name**: Enter a name for this integration. In case you have multiple integrations, this will help uniquely identify it in the list.
     - **Url**: Enter the URL that you would like to be called in response to IoT in a Box updates.
+    - **Headers** (optional): Enter headers values in query string format, for example: 
+      ```
+      X-Api: secret-key
+      Authorization: Token 
+      ```
+      will need to be input like this: `x-api=my-secret-key&authorization=Token`
 
 After saving the Integration, you will see it shown in your list of integrations.
 
