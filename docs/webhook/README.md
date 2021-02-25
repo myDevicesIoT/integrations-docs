@@ -11,11 +11,11 @@ Note: This integration provides both sensor (uplink), gateway(keepalive), and al
 ### Creating a new Webhook
 Use the following steps to setup your new webhook on the IoT in a Box side.
 
-* Log into your account on the IoT in a Box portal or using the mobile app.
-* Select the Integrations option and then select the Webhook integration.
-* Enter the following information to complete the integration:
-  - Name: Enter a name for this integration. In case you have multiple integrations, this will help uniquely identify it in the list.
-  - Url: Enter the URL that you would like to be called in response to IoT in a Box updates.
+1. Log into your account on the **IoT in a Box portal** or using the mobile app.
+2. Select the **Integrations** option and then select the **Webhook** integration.
+3. Enter the following information to complete the integration:
+    - **Name**: Enter a name for this integration. In case you have multiple integrations, this will help uniquely identify it in the list.
+    - **Url**: Enter the URL that you would like to be called in response to IoT in a Box updates.
 
 After saving the Integration, you will see it shown in your list of integrations.
 
@@ -26,12 +26,15 @@ After saving the Integration, you will see it shown in your list of integrations
 
 You can verify the integration is working by waiting for a new IoT in a Box event (or manually triggering on the device or within the dashboard). As soon as a new event occurs, the webhook will be notified and include the event payload.
 
-ou can also use a temporary service, such as RequestBin to get a sense of how things work before integrating payload events into your service.
+You can also use a temporary service, such as [RequestBin](https://requestvin.herokuapp.com/) to get a sense of how things work before integrating payload events into your service.
 
+### JSON Schema
+- [Uplink JSON Schema](https://github.com/myDevicesIoT/integrations-docs/blob/master/docs/webhook/schema/uplink-schema.json)
+- [Alert JSON Schema](https://github.com/myDevicesIoT/integrations-docs/blob/master/docs/webhook/schema/alert-schema.json)
 
 ### Example Payloads
- #### Example Payload (uplink - new sensor data received):
-  - Netvox Wireless Temp/Humidity - JSON
-  - Netvox Leak - JSON
-#### Example Payload (Alert data received):
-  - Netvox Leak (Not Detected) - JSON
+
+ #### Uplink Event:
+  - [Netvox Wireless Temp/Humidity](https://github.com/myDevicesIoT/integrations-docs/blob/master/docs/webhook/uplink-sample.json)
+ #### Alert Event:
+  - [Netvox Leak](https://github.com/myDevicesIoT/integrations-docs/blob/master/docs/webhook/alert-sample.json)
