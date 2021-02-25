@@ -4,8 +4,8 @@
 
 - [Webhook](https://github.com/myDevicesIoT/integrations-docs/tree/master/docs/webhook)
 - Azure IoT Hub
-- Azure Event Hub
-- Azure Service Hub
+- Azure Event Hubs
+- Azure Service Bus
 - Azure IoT Central
 - Azure Storage
 - AWS Kinesis
