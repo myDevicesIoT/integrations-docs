@@ -1,4 +1,8 @@
+
 # Integrations docs
+
+More information in our docs page. [docs.mydevices.com](https://docs.mydevices.com/docs) 
+
 
 ## Supported Integrations
 
