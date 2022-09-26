@@ -1,0 +1,68 @@
+{
+  "device_id": "1eaedbc0-75f7-11eb-8585-01d3d033571a",
+  "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+  "payload": [
+      {
+          "name": "Battery",
+          "sensor_id": "1f201422-75f7-11eb-8585-01d3d033571a",
+          "type": "batt",
+          "unit": "p",
+          "value": 100,
+          "channel": 5,
+          "timestamp": 1614196169569
+      },
+      {
+          "name": "Temperature",
+          "sensor_id": "1f1e1850-75f7-11eb-8585-01d3d033571a",
+          "type": "temp",
+          "unit": "c",
+          "value": 22.11,
+          "channel": 3,
+          "timestamp": 1614196169569
+      },
+      {
+          "name": "Humidity",
+          "sensor_id": "1f201420-75f7-11eb-8585-01d3d033571a",
+          "type": "rel_hum",
+          "unit": "p",
+          "value": 32.38,
+          "channel": 4,
+          "timestamp": 1614196169569
+      },
+      {
+          "name": "RSSI",
+          "sensor_id": "1f201421-75f7-11eb-8585-01d3d033571a",
+          "type": "rssi",
+          "unit": "dbm",
+          "value": -51,
+          "channel": 100,
+          "timestamp": 1614196169569
+      },
+      {
+          "name": "SNR",
+          "sensor_id": "",
+          "type": "snr",
+          "unit": "db",
+          "value": 11.3,
+          "channel": 101,
+          "timestamp": 1614196169569
+      }
+  ],
+  "gateways": [
+      {
+          "gweui": "000080029c493955",
+          "time": 0,
+          "rssi": -51,
+          "snr": 11.3
+      }
+  ],
+  "fcnt": 12,
+  "fport": 6,
+  "raw_payload": "AQEBHgijDKYAAAA=",
+  "raw_format": "base64",
+  "client_id": "ebe4c760-d761-11ea-b2ab-f35fff94ad45",
+  "hardware_id": "00137a1000000abc",
+  "timestamp": 1614196169569,
+  "application_id": "simplysense",
+  "device_type_id": "26702500-32a0-11e8-867e-ddad6d07d21e"
+}

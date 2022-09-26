@@ -1,0 +1,62 @@
+{
+  "company": {
+    "id": 6109,
+    "address": "3333 Arapahoe Rd",
+    "city": "Erie",
+    "country": "United States",
+    "created_at": "2020-08-05T21:23:48Z",
+    "industry": "[\"Food & Beverage\"]",
+    "latitude": 40.016926,
+    "longitude": -105.10077,
+    "name": "Safeway - ss pp",
+    "state": "CT",
+    "status": 0,
+    "timezone": "America/Denver",
+    "updated_at": "2020-08-05T21:23:48Z",
+    "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+    "zip": "80516"
+},
+  "location": {
+      "id": 12435,
+      "address": "3333 Arapahoe Rd",
+      "city": "Erie",
+      "country": "United States",
+      "created_at": "2020-08-05T21:23:49Z",
+      "industry": "[\"Food & Beverage\"]",
+      "latitude": 40.016926,
+      "longitude": -105.10077,
+      "name": "Safeway - ss pp",
+      "state": "CT",
+      "status": 0,
+      "timezone": "America/Denver",
+      "updated_at": "2020-08-05T21:23:49Z",
+      "user_id": "3aa2aa57-3b3e-4a7f-a8e7-9c4b001dfdc0",
+      "zip": "80516",
+      "company_id": 1234
+  },
+  "device_type": {
+      "id": "26702500-32a0-11e8-867e-ddad6d07d21e",
+      "application_id": "iotinabox",
+      "category": "module",
+      "codec": "lorawan.netvox.temp",
+      "data_type": "",
+      "description": "Netvox Temperature and Humidity Sensor",
+      "manufacturer": "Netvox",
+      "model": "R711",
+      "name": "Netvox Temperature - IoT in a Box",
+      "parent_constraint": "NOT_ALLOWED",
+      "proxy_handler": "PrometheusClient",
+      "subcategory": "lora",
+      "transport_protocol": "lorawan",
+      "version": "",
+      "created_at": "2018-03-28T15:53:25Z",
+      "updated_at": "2019-09-25T16:20:40Z"
+  },
+  "device": {
+      "id": 70078980,
+      "thing_name": "Wireless az - ss pp",
+      "created_at": "2021-02-23T16:49:40Z",
+      "updated_at": "2021-02-23T16:49:41Z",
+      "status": 0
+  }
+}
