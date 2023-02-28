@@ -1,0 +1,93 @@
+{
+  "event_type": "ping",
+  "event_data": {
+    "correlation_id": "d9b996bf-162e-43ff-a53b-f83c4725d71f",
+    "device_id": "f2a4d140-9f5f-11ec-8d8f-0ffa3ba25edd",
+    "user_id": "f48cc16e-f6fd-4d11-8b96-cb6b5b66860b",
+    "payload": [
+      {
+        "name": "",
+        "sensor_id": "",
+        "type": "digital",
+        "unit": "ping",
+        "value": 1677561910231,
+        "channel": "ping",
+        "timestamp": 0
+      }
+    ],
+    "gateways": null,
+    "fcnt": 0,
+    "fport": 0,
+    "raw_payload": "",
+    "raw_format": "",
+    "client_id": "84ce85e0-6078-11e9-bae2-4ffccf8e095d",
+    "hardware_id": "",
+    "timestamp": 1677561910261,
+    "application_id": "iotinabox",
+    "device_type_id": "7e349b80-26d1-11ec-8a59-8d10a9ed061c"
+  },
+  "company": {
+    "id": 0,
+    "address": "",
+    "city": "",
+    "country": "",
+    "created_at": null,
+    "industry": "",
+    "latitude": 0,
+    "longitude": 0,
+    "name": "",
+    "state": "",
+    "status": 0,
+    "timezone": "",
+    "updated_at": null,
+    "user_id": "",
+    "zip": "",
+    "external_id": ""
+  },
+  "location": {
+    "id": 0,
+    "address": "",
+    "city": "",
+    "country": "",
+    "created_at": null,
+    "industry": "",
+    "latitude": 0,
+    "longitude": 0,
+    "name": "",
+    "state": "",
+    "status": 0,
+    "timezone": "",
+    "updated_at": null,
+    "user_id": "",
+    "zip": "",
+    "external_id": "",
+    "company_id": 0
+  },
+  "device_type": {
+    "id": "",
+    "application_id": "",
+    "category": "",
+    "codec": "",
+    "data_type": "",
+    "description": "",
+    "manufacturer": "",
+    "model": "",
+    "name": "",
+    "parent_constraint": "",
+    "proxy_handler": "",
+    "subcategory": "",
+    "transport_protocol": "",
+    "version": "",
+    "created_at": null,
+    "updated_at": null
+  },
+  "device": {
+    "id": 769140,
+    "thing_name": "Gateway-9c5d",
+    "sensor_use": "",
+    "created_at": "2022-03-09T04:18:18Z",
+    "updated_at": "2022-03-09T04:18:18Z",
+    "status": 0,
+    "external_id": ""
+  }
+}
