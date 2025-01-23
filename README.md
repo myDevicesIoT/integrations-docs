@@ -1,12 +1,12 @@
 
 # Integrations docs
 
-More information in our docs page. [docs.mydevices.com](https://docs.mydevices.com/docs) 
+For more information visit our documentation. [docs.mydevices.com](https://docs.mydevices.com/docs/integrations) 
 
 
 ## Supported Integrations
 
-- [Webhook](https://github.com/myDevicesIoT/integrations-docs/tree/master/docs/webhook)
+- [Webhook](https://docs.mydevices.com/docs/integrations/webhook)
 - Azure IoT Hub
 - Azure Event Hubs
 - Azure Service Bus
@@ -20,7 +20,7 @@ More information in our docs page. [docs.mydevices.com](https://docs.mydevices.c
 - Google PubSub
 - Google BigQuery
 - Google Cloud Storage
-- [PagerDuty](https://github.com/myDevicesIoT/integrations-docs/blob/master/docs/pagerduty/integration-guide.md)
+- PagerDuty
 - Discord Webhook
 - Google Sheets
 - PowerBI
